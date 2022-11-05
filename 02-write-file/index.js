@@ -9,13 +9,13 @@ stdout.write(`\nPsss... Hey dude... Wanna write some lines?\nDon't worry, nobody
 
 stdin.on('data', (data) => {
   if (data.toString().toLowerCase().trim() === 'exit') {
-    sayGoodbye()
+    sayGoodbye();
   }
   writableStream.write(data);
 });
 
 process.on('SIGINT', () => {
-  sayGoodbye()
+  sayGoodbye();
 });
 
 function sayGoodbye(){
